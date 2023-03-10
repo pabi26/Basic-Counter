@@ -6,13 +6,56 @@ let limitInput = document.getElementById('limit-input')
 let maxNum = document.getElementById('max-num')
 let remainingDisplay = document.getElementById("remainingDisplay")
 let countInput = document.getElementById('count-input')
+const title =  document.getElementById('title')
+const subtitle = document.getElementById('subtitle')
+const mainBody = document.getElementById('main-body')
 
-function displayMain(){
-    document.getElementById('header').style.display = 'none';
-    document.getElementById('body').style.display = 'block';
-    document.getElementById('icons-tab').style.display = 'block'
-}
-setTimeout(displayMain, 2500);
+title.style.opacity = 0;
+subtitle.style.opacity = 0;
+mainBody.style.opacity = 0;
+
+
+
+function fadeInTitle() {
+    let opacity = parseFloat(title.style.opacity);
+    if (opacity < 1) {
+      opacity += 0.1;
+      title.style.opacity = opacity;
+      setTimeout(fadeInTitle, 100);
+    }
+  }
+  
+  // Call the animation function after a delay
+  setTimeout(fadeInTitle, 1500);
+
+  function fadeInsubtitle() {
+    let opacity = parseFloat(subtitle.style.opacity);
+    if (opacity < 1) {
+      opacity += 0.1;
+      subtitle.style.opacity = opacity;
+      setTimeout(fadeInsubtitle, 100);
+    }
+  }
+  
+  // Call the animation function after a delay
+  setTimeout(fadeInsubtitle, 3000);
+
+
+  function fadeInBody() {
+    document.getElementById('header').style.display = 'none'
+    let opacity = parseFloat(mainBody.style.opacity);
+    if (opacity < 1) {
+      opacity += 0.1;
+      mainBody.style.opacity = opacity;
+      setTimeout(fadeInBody, 150);
+    }
+  }
+  
+  // Call the animation function after a delay
+  setTimeout(fadeInBody, 5000);
+
+
+
 
 isChecked.addEventListener('change', function(){
     if(isChecked.checked) {
