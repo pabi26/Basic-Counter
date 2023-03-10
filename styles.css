@@ -71,7 +71,7 @@ main{
 #set-count,
 #limit,
 #themes{
-    max-width: 40%;
+    max-width: 400px;
     margin: 10px auto;
     border: 1px solid white;
     border-radius: 10px;
