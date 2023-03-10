@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/904b07e892.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <h1 id="title">Simple Counter</h1>
+        <h2 id="subtitle">A simple tool for keeping count of whatever you want</h2>
+    </div>
+
+    
+
+    <main id="body">
+
+        <div id="icons-tab">
+            <i class="fa-solid fa-gear" id="icon-settings"></i>
+            <i class="fa-solid fa-arrow-rotate-right" id="icon-reset"></i>
+        </div>
+
+
+        <div id="center">
+            <h2 id="count-element">0</h2>
+            <div id="buttons">
+                <div>
+                    <button id="decrement-btn" class="add-minus-btn"  onclick="decrement()">-</button>
+                </div>
+                <div>
+                    <button id="increment-btn" class="add-minus-btn"  onclick="increment()">+</button>
+                </div>
+            </div>
+            
+            <div id="availableDisplay">
+                <h3> <span id="available-text">Available:</span> <span id="limit-reached-text">Limit Reached:</span> <span id="remainingDisplay"></span></h3>
+            </div>
+            
+
+        </div>
+
+
+
+
+
+        <div id="settings">
+            <h1>Settings</h1>
+
+            <div id="set-count">
+                <h3>Set Count = <input id="count-input" type="number" min="0"> </h3>
+            </div>
+
+            <div id="limit">
+                <h3>Limits: Off / On 
+                    <label class="switch">
+                    <input id="limit-switch" type="checkbox">
+                    <span class="slider round"></span>
+                    </label>  
+                </h3>
+
+                <h3>Maximum Limit = <input id="limit-input" type="number" min="1" placeholder="1" disabled></h3>
+            </div>   
+
+            <div id="themes">
+                
+                <div id="theme1">
+                    <button class="sqaure" id="black"></button>
+                    <button class="sqaure" id="white"></button>
+                    <button class="sqaure" id="blue"></button>
+                    <button class="sqaure" id="red"></button>            
+                </div>
+
+                <div id="theme2">
+                    <button class="sqaure" id="purple"></button>
+                    <button class="sqaure" id="grey"></button>
+                    <button class="sqaure" id="orange"></button>
+                    <button class="sqaure" id="green"></button>                 
+                </div>
+
+            </div>
+            <button id="cancel-settings">X</button>
+        </div>
+
+
+        <div id="reset">
+            <h2>Reset Counter?</h2>
+            <button id="confirm-reset">Yes</button>
+            <br>
+            <button id="cancel-reset">Cancel</button>
+        </div>
+
+    </main>
+
+
+   
+
+
+
+
+
+
+    <script src="index.js" ></script>
+</body>
+</html>
